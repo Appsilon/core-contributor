@@ -1,6 +1,7 @@
 # Variable: DTHFL
 # Condition: DTHDTC ^= null
 # Rule: DTHFL = 'Y'
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -8,7 +9,7 @@ Authorities:
         References:
           - Citations:
               - Cited Guidance: DTHDTC[The date or date and time of death, represented in a
-                  standardized character format.] DTHFL[An indication that the
+                  standardized character format.]|DTHFL[An indication that the
                   subject died.]
                 Document: Model v2.0
                 Item: DTHDTC|DTHFL
@@ -35,7 +36,7 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: A value of "Y" indicates the subject died. Should be "Y" or
+              - Cited Guidance: A value of \"Y\" indicates the subject died. Should be \"Y\" or
                   null. Should be populated even when the death date is unknown.
                 Document: Model v1.7
                 Section: Table 2.2.6.1
@@ -110,16 +111,17 @@ Check:
     - name: DTHFL
       operator: not_equal_to
       value: Y
+      value_is_literal: true
 Core:
   Id: CORE-000007
   Status: Published
   Version: '1'
-Description: When a DTHDTC is populated in DM domain, death flag is populated as
-  Y in DM dataset for corresponding subject
+Description: Raise an error when DTHFL is not equal to 'Y' and DTHDTC is populated.
 Executability: Fully Executable
 Outcome:
-  Message: DTHFL is not "Y", when DTHDTC is populated
+  Message: DTHFL is not 'Y' when DTHDTC is populated.
   Output Variables:
+    - SUBJID
     - DTHDTC
     - DTHFL
 Rule Type: Record Data
