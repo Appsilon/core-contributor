@@ -1,18 +1,18 @@
 # Variable: AESTAT
-# Condition: 
+# Condition:
 # Rule: AESTAT not present in dataset
-# Verified
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: The following Qualifiers would not be used in AE; "--OCCUR",
-                  "--STAT", and "--REASND". They are the only Qualifiers from
+              - Cited Guidance: 'The following Qualifiers would not be used in AE: --OCCUR,
+                  --STAT, and--REASND. They are the only Qualifiers from
                   the SDTM Events Class not in the AE domain. They are not
                   permitted because the AE domain contains only records for
-                  adverse events that actually occurred.
+                  adverse events that actually occurred.'
                 Document: SDTMIG v3.4
                 Item: Assumption 9
                 Section: 6.2.1
@@ -25,11 +25,11 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: The following Qualifiers would not be used in AE; "--OCCUR",
-                  "--STAT", and "--REASND". They are the only Qualifiers from
+              - Cited Guidance: 'The following Qualifiers would not be used in AE: --OCCUR,
+                  --STAT, and--REASND. They are the only Qualifiers from
                   the SDTM Events Class not in the AE domain. They are not
                   permitted because the AE domain contains only records for
-                  adverse events that actually occurred.
+                  adverse events that actually occurred.'
                 Document: SDTMIG v3.3
                 Item: Assumption 9
                 Section: 6.2.1
@@ -42,14 +42,14 @@ Authorities:
       - Name: SDTMIG
         References:
           - Citations:
-              - Cited Guidance: The following Qualifiers would not be used in AE; "--OCCUR",
-                  "--STAT", and "--REASND". They are the only Qualifiers from
+              - Cited Guidance: 'The following Qualifiers would not be used in AE: --OCCUR,
+                  --STAT, and--REASND. They are the only Qualifiers from
                   the SDTM Events Class not in the AE domain. They are not
                   permitted because the AE domain contains only records for
-                  adverse events that actually occurred.
+                  adverse events that actually occurred.'
                 Document: SDTMIG v3.2
                 Item: Assumption 8
-                Section: 6.2.
+                Section: '6.2'
             Origin: SDTM and SDTMIG Conformance Rules
             Rule Identifier:
               Id: CG0044
@@ -66,7 +66,7 @@ Authorities:
                   that actually occurred. See Assumption 4b for information on
                   how to deal with negative responses or missing responses to
                   probing questions for prespecified adverse events.'
-                Document: TIG 1.0
+                Document: TIG v1.0
                 Item: Assumption 10
                 Section: 2.8.10.1
             Origin: TIG Conformance Rules
