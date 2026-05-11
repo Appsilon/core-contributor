@@ -1,6 +1,7 @@
 # Variable: DTHFL
 # Condition: DTHDTC ^= null
 # Rule: DTHFL = 'Y'
+# verified
 Authorities:
   - Organization: CDISC
     Standards:
@@ -110,15 +111,15 @@ Check:
     - name: DTHFL
       operator: not_equal_to
       value: Y
+      value_is_literal: true
 Core:
   Id: CORE-000007
   Status: Published
   Version: '1'
-Description: When a DTHDTC is populated in DM domain, death flag is populated as
-  Y in DM dataset for corresponding subject
+Description: Raise an error when DTHFL is not 'Y' when DTHDTC is populated.
 Executability: Fully Executable
 Outcome:
-  Message: DTHFL is not "Y", when DTHDTC is populated
+  Message: DTHFL is not 'Y' when DTHDTC is populated.
   Output Variables:
     - DTHDTC
     - DTHFL
